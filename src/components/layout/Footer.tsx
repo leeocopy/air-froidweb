@@ -23,9 +23,7 @@ export function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-gray-500 font-montserrat text-sm leading-relaxed max-w-xs">
-              L'excellence climatique au Maroc. Ingénierie, conception et réalisation pour les projets résidentiels, commerciaux et industriels de prestige.
-            </p>
+
             <div className="flex gap-4 pt-2">
               <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                 <Globe size={20} />
@@ -101,7 +99,7 @@ export function Footer() {
         {/* Bottom Legal Bar */}
         <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-gray-400 font-montserrat text-xs">
-            © {currentYear} {SITE_NAME}. Tous droits réservés.
+            © {currentYear}. Tous droits réservés.
           </p>
           <div className="flex flex-wrap gap-6 justify-center">
             {FOOTER_LINKS.legal.map((link) => (

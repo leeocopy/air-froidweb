@@ -13,7 +13,7 @@ export function ProductShowcase() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: "+=200%",
+        end: "+=80%",
         scrub: 1,
         pin: true,
         anticipatePin: 1,
