@@ -31,6 +31,7 @@ export function PillarsShowcase() {
   const containerRef = useRef<HTMLDivElement>(null);
   const rightColRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const activeIndexRef = useRef(0);
 
   useGSAP(() => {
     const panels = gsap.utils.toArray(".pillar-panel") as HTMLElement[];
@@ -40,15 +41,18 @@ export function PillarsShowcase() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: "+=300%", // 3 times the height to scroll through 4 panels
+        end: "+=150%", // Reduced from 300% to make it faster and lighter to scroll
         pin: true,
         scrub: 1, // Smooth scrubbing
         onUpdate: (self) => {
           // Calculate active index based on scroll progress
           const progress = self.progress;
-          // progress goes from 0 to 1. Multiply by 3.99 to keep it in array bounds (0 to 3)
           const index = Math.floor(progress * 3.99);
-          setActiveIndex(index);
+          // Only trigger React state update if the index actually changes to prevent crashes
+          if (index !== activeIndexRef.current) {
+            activeIndexRef.current = index;
+            setActiveIndex(index);
+          }
         }
       }
     });

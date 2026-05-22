@@ -17,7 +17,7 @@ const PRODUCTS = [
     category: "Climatisation",
     description: "Ultra-silencieux, faible consommation énergétique.",
     price: "4 200",
-    image: "/images/assets/Air Conditioner.H01.2k.png",
+    image: "/images/products/clim-split-12000.jpg",
     badge: "Nouveau"
   },
   {
@@ -26,7 +26,7 @@ const PRODUCTS = [
     category: "Climatisation",
     description: "Design compact, installation au sol ou mural.",
     price: "6 200",
-    image: "/images/assets/Air Conditioner.H02.2k.png"
+    image: "/images/products/clim-console-18000.jpg"
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const PRODUCTS = [
     description: "Récupération de chaleur jusqu'à 95%.",
     price: "18 900",
     oldPrice: "21 500",
-    image: "/images/services/ventilation-bg.jpg",
+    image: "/images/products/vmc-double-flux.jpg",
     badge: "Promo"
   },
   {
@@ -44,7 +44,7 @@ const PRODUCTS = [
     category: "Solaire",
     description: "Ballon d'eau sub-combiné avec capteurs solaires.",
     price: "12 500",
-    image: "/images/services/solaire-bg.jpg"
+    image: "/images/products/chauffe-eau-solaire-300l.jpg"
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const PRODUCTS = [
     category: "Solaire",
     description: "Haut rendement, garantie 25 ans.",
     price: "2 850",
-    image: "/images/services/solaire-bg.jpg"
+    image: "/images/products/panneau-pv-550w.jpg"
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const PRODUCTS = [
     category: "Cuisine Pro",
     description: "Extracteur puissant, filtres à charbon actif.",
     price: "15 800",
-    image: "/images/services/cuisine-pro-bg.jpg"
+    image: "/images/products/hotte-pro-filtration.jpg"
   },
   {
     id: 7,
@@ -68,7 +68,7 @@ const PRODUCTS = [
     category: "Accessoires",
     description: "Filtration à 99.995%, compatible VMC.",
     price: "450",
-    image: "/images/services/ventilation-bg.jpg"
+    image: "/images/products/filtre-hepa-h14.jpg"
   },
   {
     id: 8,
@@ -76,7 +76,7 @@ const PRODUCTS = [
     category: "Accessoires",
     description: "Contrôle à distance, programmation horaire.",
     price: "1 800",
-    image: "/images/assets/Air Conditioner.H01.2k.png",
+    image: "/images/products/thermostat-wifi.jpg",
     badge: "Nouveau"
   },
   {
@@ -85,7 +85,7 @@ const PRODUCTS = [
     category: "Ventilation",
     description: "Débit 350 m³/h, ultra-silencieux.",
     price: "1 200",
-    image: "/images/services/ventilation-bg.jpg"
+    image: "/images/products/extracteur-axe-150.jpg"
   }
 ];
 

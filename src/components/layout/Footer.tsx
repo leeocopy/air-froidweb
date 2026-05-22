@@ -14,12 +14,12 @@ export function Footer() {
           {/* Brand Column */}
           <div className="space-y-8">
             <Link href="/" className="inline-block group flex items-center gap-4">
-              <div className="relative w-10 h-10 flex-shrink-0">
+              <div className="relative w-48 h-16">
                 <Image 
-                  src="/images/assets/logo.png" 
+                  src="/images/assets/logo-clean.png" 
                   alt="Air Froid Expert Logo" 
                   fill 
-                  className="object-contain" 
+                  className="object-contain object-left mix-blend-multiply opacity-90 hover:opacity-100 transition-opacity" 
                 />
               </div>
               <span className="font-nevan text-2xl tracking-wide text-primary">

@@ -9,7 +9,7 @@ export const WHATSAPP_DEFAULT_MESSAGE =
 
 export const NAV_LINKS = [
   { label: "Accueil", href: "/" },
-  { label: "Qui sommes-nous", href: "/qui-sommes-nous" },
+  { label: "Présentation", href: "/presentation" },
   { label: "Expertises", href: "/expertises" },
   { label: "Catalogue", href: "/catalogue" },
   { label: "Réalisations", href: "/realisations" },
@@ -25,7 +25,7 @@ export const FOOTER_LINKS = {
     { label: "Catalogue", href: "/catalogue" },
   ],
   company: [
-    { label: "Qui sommes-nous", href: "/#qui-sommes-nous" },
+    { label: "Présentation", href: "/presentation" },
     { label: "Nos engagements", href: "/#engagements" },
     { label: "Contact", href: "/contact" },
   ],

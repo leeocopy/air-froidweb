@@ -41,12 +41,12 @@ export function Navbar() {
           
           {/* Left side: Logo */}
           <Link href="/" className="relative z-50 flex items-center group">
-            <div className="relative w-12 h-12 flex-shrink-0 transition-transform group-hover:scale-105">
+            <div className="relative w-40 h-14 flex-shrink-0 transition-transform group-hover:scale-105">
               <Image 
-                src="/images/assets/logo.png" 
+                src="/images/assets/logo-clean.png" 
                 alt="Air Froid Expert Logo" 
                 fill 
-                className="object-contain" 
+                className="object-contain object-left mix-blend-multiply" 
               />
             </div>
           </Link>
@@ -60,12 +60,12 @@ export function Navbar() {
                   <li key={link.href} className="relative">
                     <Link
                       href={link.href}
-                      className={`font-montserrat font-semibold tracking-wide text-sm transition-all duration-300 uppercase py-2 relative overflow-hidden group ${
-                        isActive ? "text-primary" : "text-gray-900 hover:text-primary"
+                      className={`font-montserrat text-sm font-semibold tracking-wider uppercase transition-colors relative group ${
+                        isActive ? "text-[#AF1818]" : "text-gray-900 hover:text-[#00883C]"
                       }`}
                     >
                       {link.label}
-                      <span className={`absolute bottom-0 left-0 w-full h-[2px] bg-primary transform origin-left transition-transform duration-300 ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`} />
+                      <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-[#00883C] transform origin-left transition-transform duration-300 ${isActive ? "scale-x-100 bg-[#AF1818]" : "scale-x-0 group-hover:scale-x-100"}`} />
                     </Link>
                   </li>
                 );
@@ -75,10 +75,10 @@ export function Navbar() {
 
           {/* Right side: CTA and Cart */}
           <div className="hidden lg:flex items-center gap-6">
-            <Link href="/catalogue" className="relative text-gray-900 hover:text-primary transition-colors">
-              <ShoppingBag size={24} />
+            <Link href="/catalogue" className="relative group p-2">
+              <ShoppingBag className="text-gray-900 group-hover:text-[#00883C] transition-colors" size={24} />
               {cartCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-[#92C5E8] text-gray-900 text-xs font-bold w-5 h-5 flex items-center justify-center rounded-sm">
+                <span className="absolute -top-1 -right-1 bg-[#AF1818] text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full">
                   {cartCount}
                 </span>
               )}
@@ -86,7 +86,7 @@ export function Navbar() {
 
             <Link
               href="/contact"
-              className="bg-[#AF1818] text-white px-8 py-3 rounded-full font-nevan tracking-widest text-sm transition-colors flex items-center gap-2 hover:bg-[#8A1212] shadow-md hover:shadow-lg uppercase"
+              className="bg-[#AF1818] text-white px-8 py-3 rounded-full font-nevan text-sm tracking-widest uppercase hover:bg-[#8A1212] transition-colors shadow-lg hover:shadow-xl flex items-center gap-2"
             >
               Demander un devis <span className="text-xl leading-none font-light">↗</span>
             </Link>
