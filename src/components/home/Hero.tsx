@@ -70,20 +70,20 @@ export function Hero() {
     <section ref={containerRef} className="relative w-full h-screen min-h-[800px] flex flex-col lg:flex-row bg-[#F4F7F9] overflow-hidden">
       
       {/* Left Column - Text Content (50%) */}
-      <div className="w-full lg:w-1/2 flex flex-col justify-center px-4 md:px-12 xl:px-24 z-10 pt-32 lg:pt-0 h-full">
+      <div className="w-full lg:w-1/2 flex flex-col justify-center px-4 md:px-12 xl:px-24 z-10 pt-32 lg:pt-0 h-full relative">
         <div className="max-w-2xl mx-auto lg:mx-0 w-full">
           
-          <h1 className="font-nevan text-4xl md:text-5xl lg:text-[4vw] xl:text-[4.2rem] leading-[1.1] text-gray-900 uppercase tracking-wide mb-6">
+          <h1 className="font-nevan text-4xl md:text-5xl lg:text-[4vw] xl:text-[4.2rem] leading-[1.1] text-gray-900 lg:text-gray-900 uppercase tracking-wide mb-6">
             {titleLines.map((line, idx) => (
               <span key={idx} className="block overflow-hidden pb-2">
-                <span className="char-reveal inline-block text-primary">
+                <span className="char-reveal inline-block text-primary drop-shadow-sm lg:drop-shadow-none">
                   {line}
                 </span>
               </span>
             ))}
           </h1>
           
-          <p className="mt-4 text-gray-600 font-montserrat text-lg md:text-xl leading-relaxed mb-10 char-reveal max-w-lg">
+          <p className="mt-4 text-gray-800 lg:text-gray-600 font-montserrat text-lg md:text-xl leading-relaxed mb-10 char-reveal max-w-lg drop-shadow-sm lg:drop-shadow-none font-medium lg:font-normal">
             Installations de climatisation, ventilation, énergie solaire et cuisine professionnelle pour particuliers et entreprises à Marrakech et partout au Maroc.
           </p>
           
@@ -97,7 +97,7 @@ export function Hero() {
             </Link>
             <Link 
               href="/contact" 
-              className="w-full sm:w-auto px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-full font-nevan tracking-wider uppercase hover:border-primary hover:text-primary transition-all shadow-sm text-center"
+              className="w-full sm:w-auto px-8 py-4 bg-white/90 backdrop-blur-sm lg:bg-white text-gray-900 border border-gray-200 rounded-full font-nevan tracking-wider uppercase hover:border-primary hover:text-primary transition-all shadow-sm text-center"
             >
               Demander un devis
             </Link>
@@ -106,8 +106,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Right Column - Video Background (50%) */}
-      <div className="hidden lg:block lg:w-1/2 relative h-full bg-gray-900">
+      {/* Right Column / Mobile Background - Video Background */}
+      <div className="absolute inset-0 lg:relative lg:w-1/2 h-full bg-gray-900 z-0">
         <div className="hero-image-container relative w-full h-full overflow-hidden">
           <video 
             src="/videos/hero-video.mp4" 
@@ -115,10 +115,10 @@ export function Hero() {
             loop 
             muted 
             playsInline 
-            className="absolute inset-0 w-full h-full object-cover opacity-90"
+            className="absolute inset-0 w-full h-full object-cover opacity-15 lg:opacity-90"
           />
           {/* Subtle overlay to integrate the split better */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#F4F7F9] lg:bg-gradient-to-r lg:from-black/20 to-transparent" />
         </div>
       </div>
 
