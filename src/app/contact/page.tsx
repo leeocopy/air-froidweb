@@ -24,26 +24,16 @@ export default function ContactPage() {
     });
   };
 
-  useGSAP(() => {
-    gsap.fromTo(
-      ".reveal-item",
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power2.out",
-      }
-    );
-  }, { scope: containerRef });
+  // Animation entrance issue workaround: we removed the global useGSAP that was 
+  // keeping the elements at opacity 0 if the animation failed to trigger.
+  // The wizard step animation is kept intact.
 
   return (
     <div ref={containerRef} className="bg-white min-h-screen pt-32 pb-32">
       <div className="w-full max-w-[1920px] mx-auto px-4 md:px-12 xl:px-24">
         
         {/* Header Section */}
-        <div className="text-center mb-20 reveal-item">
+        <div className="text-center mb-20">
           <span className="font-nevan text-sm tracking-[0.3em] text-[#32A5DE] uppercase mb-4 block">Démarrons votre projet</span>
           <h1 className="font-nevan text-5xl md:text-6xl text-gray-900 tracking-wide uppercase mb-6">
             Contactez <span className="text-primary">Nous</span>
@@ -53,7 +43,7 @@ export default function ContactPage() {
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           
           {/* Left: Interactive Multi-Step Form Wizard */}
-          <div className="w-full lg:w-2/3 reveal-item">
+          <div className="w-full lg:w-2/3">
             <div className="bg-gray-50 border border-gray-100 rounded-[2rem] p-8 md:p-12 shadow-xl relative overflow-hidden">
               
               {/* Step Indicators */}
@@ -149,7 +139,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right: Standard Contacts Info & Map */}
-          <div className="w-full lg:w-1/3 space-y-12 reveal-item">
+          <div className="w-full lg:w-1/3 space-y-12">
             <div>
               <h3 className="font-nevan text-2xl text-gray-900 uppercase mb-8">Siège & Showroom</h3>
               <ul className="space-y-6">
